@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<head>
+<script>
+    function SetVolume(num){
+if(Boolean(num/100)){var numa =num} 
+      if(!Boolean(num/100)){
+     var player = document.getElementById(num); 
+        if(typeof numa == undefined){player.volume = 50 / 100;}
+        else{player.volume = numa / 100;}
+        }
+    }
+</script>  
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+function myFunction(){
+  var player = document.getElementById('Q'); 
+  player.volume = document.getElementById('volume').value / 100;
+  document.getElementById('Q').play();
+  
+}
+function myFunction2(){
+  var player = document.getElementById('W'); 
+  player.volume = document.getElementById('volume').value / 100;
+  document.getElementById('W').play();
+}
+function myFunction3(){
+  var player = document.getElementById('E'); 
+  player.volume = document.getElementById('volume').value / 100;
+  document.getElementById('E').play();
+}
+function myFunction4(){
+  var player = document.getElementById('A'); 
+  player.volume = document.getElementById('volume').value / 100;
+  document.getElementById('A').play();
+}
+function myFunction5(){
+  var player = document.getElementById('S'); 
+  player.volume = document.getElementById('volume').value / 100;
+  document.getElementById('S').play();
+}
+function myFunction6(){
+  var player = document.getElementById('D'); 
+  player.volume = document.getElementById('volume').value / 100;
+  document.getElementById('D').play();
+}
+function myFunction7(){
+  var player = document.getElementById('Z'); 
+  player.volume = document.getElementById('volume').value / 100;
+  document.getElementById('Z').play();
+}  
+function myFunction8(){
+  var player = document.getElementById('X'); 
+  player.volume = document.getElementById('volume').value / 100;
+  document.getElementById('X').play();
+}
+function myFunction9(){
+  var player = document.getElementById('C'); 
+  player.volume = document.getElementById('volume').value / 100;
+  document.getElementById('C').play();
+}  
+</script>
+<script>
+
+</script> 
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">      
+</head>
+<body onkeypress="keyFunction(event)">
+<div id="drum-machine">
+  <div id="display">
+    <div id="SAS"><em><p>SAS (<i class="fa fa-fire"></i>)</p></em></div>
+    <div class="col-xs-6" id="left">
+      <p class="drum-pad" id="pad1" onclick=myFunction();keyFunction('Q'); accesskey="Q">Q<audio class="clip" id="Q" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" type="audio/mpeg" > </audio></p>
+      <p class="drum-pad" id="pad2" onclick="myFunction2();keyFunction('W');SetVolume('W')" accesskey="W">W<audio class="clip" id="W" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3" type="audio/mpeg" > </audio></p>
+      <p class="drum-pad" id="pad3" onclick=myFunction3();keyFunction('E'); accesskey="E">E<audio class="clip" id="E" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3" type="audio/mpeg" > </audio></p>
+      <p class="drum-pad" id="pad4" onclick=myFunction4();keyFunction('A'); accesskey="A">A<audio class="clip" id="A" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3" type="audio/mpeg" > </audio></p>
+      <p class="drum-pad" id="pad5" onclick=myFunction5();keyFunction('S'); accesskey="S">S<audio class="clip" id="S" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3" type="audio/mpeg" > </audio></p>
+      <p class="drum-pad" id="pad6" onclick=myFunction6();keyFunction('D'); accesskey="D">D<audio class="clip" id="D" src="https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3" type="audio/mpeg" > </audio></p>
+      <p class="drum-pad" id="pad7" onclick=myFunction7();keyFunction('Z'); accesskey="Z">Z<audio class="clip" id="Z" src="https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3" type="audio/mpeg" > </audio></p>
+      <p class="drum-pad" id="pad8" onclick=myFunction8();keyFunction('X'); accesskey="X">X<audio class="clip" id="X" src="https://s3.amazonaws.com/freecodecamp/drums/Chord_1.mp3" type="audio/mpeg" > </audio></p>
+      <p class="drum-pad" id="pad9" onclick=myFunction9();keyFunction('C'); accesskey="C">C<audio class="clip" id="C" src="https://s3.amazonaws.com/freecodecamp/drums/Give_us_a_light.mp3" type="audio/mpeg" > </audio></p>
+    </div>
+    <div class="col-xs-6" id="m">
+      <p id="me"></p>
+      <input id="volume" type="range" min="0" max="100" step="1" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)"></input>
+
+    </div>
+  </div>
+  
+  
+  
+  </div>
+</div>
+
+<div id="demo"></div>
+<div id="demod"></div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script>
+<script type="text/babel">
+function keyFunction(event){
+  var a= "";  
+
+  a= event.key;
+  if(a==undefined){a=event;}
+ 
+  document.getElementById('demo').innerHTML= "This key was pressed: " + a;
+
+  var message= "No Audio";
+  switch(a){
+    case 'Q':
+ document.getElementById(a).play();      
+message= "Audio 1";
+    break;
+    case 'W':
+ document.getElementById(a).play();      
+message= "Audio 2";
+    break;      
+    case 'E':
+ document.getElementById(a).play();      
+message= "Audio 3";
+    break;      
+    case 'A':
+ document.getElementById(a).play();      
+message= "Audio 4";
+    break;      
+    case 'S':
+ document.getElementById(a).play();      
+message= "Audio 5";
+    break;      
+    case 'D':
+ document.getElementById(a).play();      
+message= "Audio 6";
+    break;      
+    case 'Z':
+ document.getElementById(a).play();      
+message= "Audio 7";
+    break;
+    case 'X':
+ document.getElementById(a).play();      
+message= "Audio 8";
+    break;
+    case 'C':
+ document.getElementById(a).play();      
+message= "Audio 9";
+    break;  
+    default:
+message= "No Audio: " + a;
+  }
+
+class MyComponent extends React.Component{
+  constructor(props){
+    super(props);
+  }
+  
+  render(){
+    return(
+message
+    );}
+  }
+
+ReactDOM.render(<MyComponent />, document.getElementById('me'));
+  
+}
+</script>
+
+</body>
+</html>
